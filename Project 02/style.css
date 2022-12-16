@@ -1,0 +1,120 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+/* ! i want to know why the section has aria lebel in this case.  */
+/* ! i can get the whole image below the navbar */
+/* !  */
+/* project 2  */
+:root {
+  /* * setting fonts value */
+  --title-font: normal 800 80px/124% "Montserrat", Arial;
+  --description-font: normal 500 31px/125% "Montserrat", Arial;
+  --navbar-font: normal 500 17px/125% "Montserrat", Arial;
+  --bigButton-font: normal 600 32px/125% "Montserrat", Arial;
+  --smalbutton-font: normal 500 17px/125% "Montserrat", Arial;
+
+  /* * setting color properties */
+  --nav-bgc: #000;
+  --btn-bgc: #ba0cc5;
+  --txt-color: #fff;
+  --nav-text-color: rgba(255, 255, 255, 0.8);
+}
+
+/*! setting margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* * background image */
+body {
+  background: url("/assets/bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/** navbar */
+.navbar,
+ul {
+  display: flex;
+  color: var(--txt-color);
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bgc);
+}
+
+.navbar {
+  padding: 20px 140px;
+}
+
+.grow-list {
+  flex: 1 50%;
+}
+
+ul {
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 20px;
+  font: var(--navbar-font);
+  color: var(--nav-text-color);
+}
+
+li:first-child::after {
+  content: "\0002C7";
+  font-size: large;
+}
+
+.logo {
+  height: 40px;
+}
+
+.line {
+  width: 2px;
+  height: 50px;
+  background-color: #fff;
+  margin-left: 100px;
+}
+
+/* * nav button */
+.button-small {
+  background-color: var(--btn-bgc);
+  padding: 10px 30px;
+  border-style: none;
+  border-radius: 8px;
+  color: var(--txt-color);
+  font: var(--smalbutton-font);
+}
+
+/** hero section  */
+.hero {
+  margin-top: 150px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--txt-color);
+}
+.hero-heading {
+  width: 950px;
+  font: var(--title-font);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.hero-description {
+  font: var(--description-font);
+  margin: 20px auto;
+}
+
+.button-large {
+  font: var(--bigButton-font);
+  padding: 1.5rem 1.8rem;
+  background-color: var(--btn-bgc);
+  border-radius: 10px;
+  border-style: none;
+  margin: 40px;
+  color: var(--txt-color);
+}

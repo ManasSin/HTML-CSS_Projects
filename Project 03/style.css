@@ -1,0 +1,189 @@
+/* You can not modify anything from the HTML file */
+/* You can only modify the CSS file */
+/* * this onces little odd */
+
+:root {
+  /** font setting for every part */
+  --nav-active: normal 800 31px/125% "Orbitron", arial;
+  --nav-inactive: normal 500 25px/125% "Orbitron", arial;
+  --nav-search: normal 400 30px/125% "Poppins", serif;
+  --title-text: normal 800 73px/125% "Orbitron", arial;
+  --description-text: normal 400 18px/125% "Poppins", serif;
+  --CTA-btn: normal 500 25px/125% "Orbitron", arial;
+  --contact-us: normal 500 26px/125% "Poppins", serif;
+
+  /** nav-button test color */
+  --nav-search-color: rgba(0, 0, 0, 0.5);
+}
+
+/** universal setting */
+*,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** body color */
+body {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+
+/** navbar */
+.navbar-container,
+ul,
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 20px; */
+}
+.navbar-container {
+  padding: 50px 120px;
+}
+
+/** selecting image using atribute selector */
+img[alt="brand-logo"] {
+  height: 50px;
+}
+
+/** selecting image div using :has() selector */
+.navbar-container > div:has(ul) {
+  flex: 1 50%;
+}
+
+ul {
+  justify-content: center;
+}
+
+li {
+  font: var(--nav-inactive);
+  list-style-type: none;
+  margin: 0 20px;
+}
+
+/** selecting 1st li child using nth-child() */
+li:nth-child(1) {
+  font: var(--nav-active);
+  position: relative;
+}
+li:nth-child(1)::before {
+  content: " ";
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  top: 38px;
+  left: 20px;
+  background-color: #000;
+}
+
+/** nav search */
+.nav-button {
+  font: var(--nav-search);
+  color: var(--nav-search-color);
+  padding: 5px 50px;
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 15px;
+  margin: auto 20px;
+}
+.search-icon {
+  margin: auto 20px;
+}
+
+/** Body/ hero-container - setting flex brings all in row. So set position absolute to all assets */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 150px 120px;
+}
+
+.hero-container-right {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: -100px;
+  margin-right: -70px;
+}
+
+/** hero image */
+img[alt^="person-hero"] {
+  margin-top: -50px;
+  height: 640px;
+  position: relative;
+}
+.square {
+  position: absolute;
+  bottom: 70px;
+  left: 300px;
+  z-index: -1;
+}
+
+/** Hero text */
+.hero-heading {
+  font: var(--title-text);
+  margin-right: -50px;
+}
+
+.hero-description {
+  font: var(--description-text);
+  margin: 70px 200px 110px 200px;
+  text-align: center;
+}
+
+.button-email {
+  font: var(--CTA-btn);
+  color: var(--nav-search-color);
+  background-color: #fff;
+  padding: 5px 40px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.button-join {
+  font: var(--CTA-btn);
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border: 4px solid #000;
+  border-radius: 15px;
+}
+
+.contact-heading {
+  font: var(--contact-us);
+  color: var(--nav-search-color);
+  margin: 120px auto 10px auto;
+  text-align: center;
+}
+
+.icons > span {
+  margin: 10px;
+}
+
+/** selecting all the image which has attribute of src="/assets" which are under span 'just to be more precise' */
+/* span > img[src^="/assets"] {
+} temp. just to decorate image and all first */
+
+.star {
+  position: absolute;
+  bottom: 200px;
+  left: 800px;
+  height: 30px;
+}
+.star ~ .star {
+  position: absolute;
+  top: 250px;
+  left: 1600px;
+}
+.globe {
+  position: absolute;
+  top: 160px;
+  left: 1000px;
+}
