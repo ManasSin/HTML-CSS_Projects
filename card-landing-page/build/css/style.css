@@ -81,12 +81,14 @@ select {
   --text-white: #ffffff;
   --pink-text: #f637ec;
   --body-color: rgba(21, 21, 21, 1);
+  --banner-color: rgba(41, 41, 41, 1);
+  --pink-background: rgba(252, 239, 251, 1);
 
   /* * text color and font value */
   --light-pink: rgba(246, 55, 236, 0.5);
   --hedline: normal 400 75px "Poppins", serif;
-  --nav-items: normal 300 16px/28px "Poppins", serif;
-  --body: normal 400 20px/0.1rem "Poppins", serif;
+  --nav-items: normal 300 16px "Poppins", serif;
+  --body: normal 300 20px "Poppins", serif;
 }
 
 /** body color */
@@ -128,12 +130,13 @@ nav {
   border-radius: 5%;
 }
 
-.nav-links > ul > li:hover {
+.nav-links > ul > li > a:hover {
   transform: translateX(-1px);
+  position: relative;
   box-shadow: 5px 2px 0 0 var(--light-pink);
   transform: translateY(-2px) translateX(-5px);
   transition: 300ms;
-  border: 2px solid var(--light-pink);
+  border: 1.5px solid var(--light-pink);
 }
 
 /* * remove background from selection tag */
@@ -172,7 +175,7 @@ nav {
 
 .main {
   width: 100vw;
-  margin: 5rem 4.5rem;
+  margin: 5rem 5rem;
   display: flex;
   height: 70vh;
 }
@@ -234,31 +237,40 @@ nav {
   z-index: -1;
 }
 
-/* .btn-large > p::before {
-  content: url("../../Assets/Icons/btn-pink-bg.svg");
-  display: block;
-  width: 140px;
-} */
-
 /* * eye-catcher section */
 
-.eye-catcher,
+.eye-catcher {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+
 .left,
 .right {
   display: flex;
   align-items: center;
+  gap: 2.5rem;
 }
 
 /* * num */
-
 .catcher-num {
-  font: normal 400 24px "poppins";
-  letter-spacing: 0.1rem;
+  font: normal 500 45px "poppins";
+  letter-spacing: 0.06rem;
+  position: relative;
 }
 
-.catcher-num span {
-  font-size: 32px;
-  margin: 0 0 0 -13px;
+/* * adding + sign after numbers and catcher text */
+.catcher-num > p::after {
+  content: "+";
+  display: inline;
+  position: absolute;
+  color: var(--pink-text);
+}
+
+.catcher-text {
+  font: var(--body);
+  line-height: 30px;
+  max-width: 110px;
 }
 
 /* * cards at right position */
@@ -272,4 +284,216 @@ nav {
   position: absolute;
   right: -15rem;
   top: 7.2rem;
+}
+
+/* ! banner section */
+
+.banner {
+  margin: 8rem 0 5rem 0;
+  background-color: var(--banner-color);
+  padding: 4rem 6rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ! article section  */
+
+.article01 {
+  margin: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.article-left {
+  font: var(--hedline);
+}
+
+.article-left span {
+  color: var(--pink-text);
+}
+
+.article-right {
+  font: var(--body);
+  color: var(--text-light);
+  line-height: 30px;
+  max-width: 35%;
+}
+
+/* ! cards section */
+
+.cards {
+  margin: 8rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem;
+}
+
+/* * cards decoration */
+
+.cards > div > div {
+  padding: 3rem 1.1rem;
+  background-color: var(--banner-color);
+  color: var(--text-light);
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  grid-template-rows: auto, auto;
+  font: normal 400 28px "Poppins";
+  text-align: center;
+  border-top: 2px solid linear-gradient(#000, #999);
+  height: 100%;
+}
+
+.cards img {
+  height: 100px;
+}
+
+.card-middle {
+  transform: translateY(-3rem);
+  padding: 3px;
+}
+.middle {
+  background: linear-gradient(135deg, rgb(37, 37, 37), #999);
+}
+
+.card-bg {
+  padding: 2px;
+  background: linear-gradient(315deg, rgb(37, 37, 37) 15%, #fff);
+}
+
+/* ! card choice section */
+
+.card-choice {
+  margin: 8rem 0 0;
+  padding: 5rem;
+  background: var(--pink-background);
+  display: grid;
+  place-items: center;
+}
+
+.choice-text {
+  color: black;
+  text-align: center;
+  max-width: 80%;
+}
+
+.choice-text > h1 {
+  font: var(--hedline);
+}
+
+.choice-text span {
+  color: var(--pink-text);
+  font-weight: 500;
+}
+
+.choice-text > p {
+  max-width: 75%;
+  font: var(--body);
+  margin: 2.5rem auto;
+}
+
+/* * vcards */
+.vcards {
+  margin-top: -4rem;
+}
+
+/* ! rating section */
+
+.rating {
+  margin: 8rem 0;
+  display: grid;
+  place-items: center;
+}
+
+.rating-text {
+  color: #fff;
+}
+
+/* *ratting cards decor */
+
+.rating-cards {
+  padding: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.r-c {
+  max-width: 40%;
+}
+
+.rating-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  gap: 1.8rem;
+  align-items: flex-start;
+  background: rgba(30, 31, 36, 1);
+  font: normal 200 16px "Poppins";
+  height: 100%;
+}
+
+.rating-items > div > p + p {
+  font-size: 12px;
+}
+
+.rating-items > img {
+  height: 25px;
+}
+
+.one-rating {
+  background: linear-gradient(135deg, rgb(97, 97, 97) 10%, #999);
+}
+
+/* ! cursour */
+.pointer {
+  display: flex;
+  gap: 10px;
+}
+
+.pointer > div {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(103, 103, 103);
+  border-radius: 50%;
+}
+
+.pointer > div:nth-child(1) {
+  height: 20px;
+  width: 70px;
+  background-color: #f637ec;
+  border-radius: 20px;
+}
+
+.pointer > div:nth-child(1)::before {
+  content: " ";
+  display: block;
+  position: relative;
+  filter: blur(20px);
+  height: 20px;
+  width: 70px;
+  background-color: #f637ec;
+  border-radius: 20px;
+}
+
+/* ! styling section */
+
+.style-heading {
+  background: url("../../Assets/Photos/Rectangle\ 6773.png");
+  position: relative;
+}
+
+.transparent {
+  width: 100%;
+  background: url("../../Assets/Photos/Rectangle\ 6774.png");
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
 }
