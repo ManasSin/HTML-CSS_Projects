@@ -279,11 +279,13 @@ nav {
   position: absolute;
   right: -2rem;
   top: 3rem;
+  z-index: -3;
 }
 .cards-front {
   position: absolute;
   right: -15rem;
   top: 7.2rem;
+  z-index: -1;
 }
 
 /* ! banner section */
@@ -482,18 +484,72 @@ nav {
 
 /* ! styling section */
 
-.style-heading {
-  background: url("../../Assets/Photos/Rectangle\ 6773.png");
+.styling {
   position: relative;
 }
 
-.transparent {
-  width: 100%;
-  background: url("../../Assets/Photos/Rectangle\ 6774.png");
+.style-heading {
   display: flex;
-  flex-flow: row-reverse;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin: 8rem 5rem; */
+  padding: 8rem 5rem;
+  position: relative;
+}
+
+.style-heading > h1 {
+  max-width: 85%;
+  font: var(--hedline);
+}
+
+.style-heading span {
+  color: #000;
+}
+
+.btn-last {
+  margin: 2rem 0;
+  font-size: 24px;
+}
+
+.btn-last > p::after {
+  content: url("../../Assets/Icons/RightArrow.svg");
+  padding-left: 1rem;
+  margin-top: -3px;
+}
+
+.transparent {
+  background: url("../../Assets/Photos/Rectangle\ 6774.png");
+  width: 100%;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
-  z-index: -1;
-  overflow: hidden;
+  top: 1px;
+  z-index: -3;
+}
+
+.diamond-left {
+  position: relative;
+  top: 2rem;
+}
+.diamond-right {
+  position: relative;
+  top: -1rem;
+}
+
+.solid-img {
+  position: absolute;
+  top: 1px;
+  z-index: -5;
+}
+
+footer {
+  display: flex;
+}
+
+footer > div {
+  margin: 5rem;
 }
