@@ -70,7 +70,7 @@ h6 {
 
 :root {
   /* * al the text setting here */
-  --heading-text: normal 700 3rem/137.52% "Inter", serif;
+  --heading-text: normal 700 3rem/129.52% "Inter", serif;
   /* letter-spacing: 0.005em */
 
   --sub-heading-text: normal 600 2.25rem/129.52% "Inter", serif;
@@ -141,7 +141,7 @@ h6 {
 
 .heading {
   font: var(--heading-text);
-  letter-spacing: 0.005em;
+  letter-spacing: 0.008em;
 }
 
 .text-white {
@@ -236,6 +236,7 @@ section[aria-label] {
   width: clamp(540px, 50%, 700px);
   display: flex;
   flex-flow: column nowrap;
+  flex-shrink: 3/4;
   gap: 1.5rem;
   padding: 1rem 3rem 1rem 0;
 }
@@ -254,6 +255,7 @@ section[aria-label] {
 .buttons {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .btn-ghost {
@@ -267,6 +269,7 @@ section[aria-label] {
 }
 
 .right {
+  /* width: clamp(480px, 50%, 520px); */
   padding: 0 2rem 3rem;
 }
 
@@ -319,14 +322,15 @@ section[aria-label] {
   display: flex;
   gap: 2rem;
   justify-content: space-around;
+  flex-flow: wrap;
 }
 
 .card {
   gap: 1.5rem;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  max-width: 25%;
-  padding: 2rem 1rem;
+  width: 290px;
+  padding: 2rem 1.5rem;
 
   text-align: center;
 
@@ -357,6 +361,10 @@ section[aria-label] {
   padding: 1rem 2rem;
 }
 
+.form-heading {
+  padding: 0 15rem 2rem 2rem;
+}
+
 /* ? form section */
 
 .adv-form {
@@ -367,6 +375,7 @@ section[aria-label] {
 .adv-form-left {
   width: clamp(570px, 60%, 570px);
   padding: 0 0;
+  height: 100%;
 }
 
 .adv-form .btn {
@@ -409,6 +418,7 @@ section[aria-label] {
 }
 
 .btn-black {
+  margin: 5px 0;
   list-style-type: none;
   padding: 12px 18px;
   border-radius: 20px;
@@ -453,9 +463,10 @@ section[aria-label] {
 
 .pricing-card {
   margin: 7rem auto 0;
-  background: var(--white-bright);
-  padding: 1.5rem 1.5rem;
-  max-width: 30%;
+  background-color: var(--white-bright);
+  padding: 1.5rem 1.7rem;
+  max-width: 295px;
+  /* max-width: 350px; */
 
   border-radius: 25px;
 
@@ -493,6 +504,10 @@ section[aria-label] {
 
 .pricing-card:nth-child(even) {
   background: var(--blue-primary);
+}
+
+.pricing-card:nth-child(even) .br {
+  border-color: var(--white-light);
 }
 
 .pricing-card:nth-child(even) > .btn-primary {
