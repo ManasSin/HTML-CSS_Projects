@@ -369,6 +369,7 @@ section[aria-label] {
 
 .adv-form {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -461,6 +462,10 @@ section[aria-label] {
 
 /* ? pricing card */
 
+.pricing > .small-card {
+  justify-content: space-between;
+}
+
 .pricing-card {
   margin: 7rem auto 0;
   background-color: var(--white-bright);
@@ -525,4 +530,150 @@ section[aria-label] {
 
 .pricing-card .btn {
   margin-top: 1rem;
+}
+
+/* * review section  */
+
+.review {
+  background: var(--white-bright);
+}
+
+.review-items {
+  max-width: var(--max-widht);
+  margin: auto;
+  padding: 0 0 4rem;
+}
+
+/* ? texts  */
+
+.customer-words {
+  max-width: var(--max-widht);
+  margin: auto;
+
+  justify-content: space-between;
+  align-items: baseline;
+
+  padding: 3rem 2rem;
+}
+
+.customer-words > .left {
+  width: 40%;
+}
+
+.customer-words > .right {
+  width: 50%;
+}
+
+/* ? review cards section */
+
+.review-div {
+  /* max-width: var(--max-widht);
+  margin: auto; */
+
+  overflow: scroll;
+  padding: 0 2rem;
+
+  gap: 2rem;
+  flex-flow: nowrap;
+
+  scroll-behavior: smooth;
+}
+
+/* ? cards under review div */
+
+.review-cards {
+  text-align: left;
+  min-width: 560px;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.review-div > .card:nth-child(even) {
+  transform: none;
+  filter: none;
+  order: -1;
+  color: var(--white-bright);
+}
+
+.starts {
+  gap: 6px;
+}
+
+/* ? scroll - bar */
+
+.scroll-bar {
+  margin: 3rem;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(62, 61, 61, 0.5);
+  border-radius: 10px;
+}
+
+.blue-bar {
+  width: 30%;
+  height: 100%;
+  background-color: var(--blue-primary);
+  border-radius: 10px;
+}
+
+/* * singup section */
+
+.signup {
+  max-width: var(--max-widht);
+  padding: 3rem 2rem;
+  margin: auto;
+
+  text-align: center;
+
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+}
+
+.signup > .card {
+  padding: 1rem 2rem;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgba(62, 61, 61, 0.5);
+}
+
+.signup > .card .btn-black {
+  transform: none;
+  flex: 1 0 auto;
+  filter: none;
+  border: none;
+}
+
+/* .signup > .card .btn .btn-primary {
+  flex: 1;
+} */
+
+.signup > .card .btn:hover {
+  cursor: text;
+}
+
+/* * footer section */
+
+footer {
+  max-width: var(--max-widht);
+  margin: auto;
+  padding: 2rem 2rem;
+
+  gap: 3rem;
+}
+
+.divider {
+  outline: 1px solid var(--form-text-bg);
+  width: 100%;
+}
+
+footer > .adv-form {
+  width: 100%;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+
+footer > .adv-form div {
+  gap: 10px;
 }
