@@ -209,7 +209,7 @@ nav {
   justify-content: start;
 }
 
-.nav-items a {
+a {
   list-style: none;
   text-decoration: none;
   color: inherit;
@@ -271,6 +271,73 @@ nav {
   position: relative;
   right: -200px;
   top: -20px;
+}
+
+/* ? responsive */
+
+@media (max-width: 950px) {
+  .nav-items {
+    display: none;
+  }
+
+  .tittle {
+    padding: 4rem 2rem;
+  }
+
+  .tittle .tittle-left {
+    width: 60%;
+  }
+
+  .tittle .tittle-right {
+    width: 40%;
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .tittle .tittle-right > p {
+    width: 70%;
+    position: absolute;
+    bottom: 1px;
+    left: 10px;
+  }
+}
+
+/* ? mobile */
+
+@media (max-width: 600px) {
+  nav > .buttons {
+    display: none;
+  }
+
+  .tittle {
+    flex-flow: column-reverse;
+    width: 100%;
+  }
+
+  .tittle > .tittle-left {
+    width: 100%;
+  }
+
+  .tittle > .tittle-left h1 {
+    font: normal 600 28px/177% "Slovic", Serif;
+    letter-spacing: 0.02em;
+  }
+
+  .tittle > .tittle-left > p {
+    padding: 0;
+  }
+
+  .tittle > .tittle-right {
+    padding: 0;
+    width: 100%;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tittle .tittle-right > p {
+    display: none;
+  }
 }
 
 /* ! MVP Sections */
@@ -364,6 +431,8 @@ nav {
 .recommendation {
   justify-content: space-between;
   align-items: center;
+
+  flex-flow: wrap;
 }
 
 .recommendation > h1 {
@@ -385,4 +454,269 @@ nav {
 
 .recmmended-game .game-display {
   width: 45%;
+}
+
+/* ? responsive seciton */
+
+@media (max-width: 800px) {
+  .MVP > .cards {
+    justify-content: space-around;
+  }
+
+  /* ? recommendation text */
+
+  .recommendation > h1 {
+    width: 80%;
+  }
+  .recommendation > .buttons {
+    display: none;
+  }
+
+  /* ? recommended-game section */
+
+  .MVP > .recmmended-game {
+    width: 90%;
+    flex-flow: column;
+  }
+
+  .MVP > .recmmended-game > .game-display {
+    width: 100%;
+  }
+}
+
+/* ? mobile */
+
+@media (max-width: 600px) {
+  .MVP {
+    padding: 3rem 2rem;
+  }
+
+  .MVP > h1 {
+    font: normal 600 24px/177% "Slovic", Serif;
+    letter-spacing: 0.02em;
+    width: 100%;
+  }
+
+  .game-display {
+    flex-flow: column;
+    width: 100%;
+  }
+
+  .game-display > .image {
+    width: 100%;
+  }
+
+  .recmmended-game > .game-display {
+    width: 80%;
+  }
+
+  .recmmended-game > .game-display > .image {
+    width: 70%;
+  }
+
+  .game-display > .tittle-left {
+    width: 100%;
+  }
+
+  .MVP > .game-display > .tittle-left > h1 {
+    font: normal 600 24px/177% "Slovic", Serif;
+    letter-spacing: 0.02em;
+  }
+
+  .recommendation > h1 {
+    font: normal 600 24px/177% "Slovic", Serif;
+    letter-spacing: 0.02em;
+    width: 100%;
+  }
+}
+
+/* ! most playes game of the year */
+
+.most-played {
+  background-color: rgb(0, 0, 0);
+}
+
+.game-of-year {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 7rem 2rem 3rem;
+
+  gap: 3rem;
+
+  overflow: hidden;
+}
+
+.game-of-year > h1 {
+  text-align: center;
+}
+
+.game-of-year > .game-display {
+  position: relative;
+  z-index: 1;
+}
+
+.game-of-year > .game-display > .image {
+  width: 40%;
+  height: 80%;
+}
+
+.game-of-year .tittle-left {
+  width: 55%;
+  justify-content: space-around;
+}
+
+.image-display {
+  justify-content: space-between;
+  margin-bottom: -8rem;
+}
+
+.image-display > img {
+  width: 45%;
+}
+
+.image-display > img:nth-child(2) {
+  height: 70%;
+  align-self: flex-end;
+}
+
+.stroke-text {
+  font-size: 115px;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 var(--white-light), 1px -1px 0 var(--white-light),
+    -1px 1px 0 #000, 1px 1px 0 var(--white-light);
+
+  filter: opacity(0.2);
+
+  width: 100%;
+  position: absolute;
+  top: 15%;
+  bottom: 85%;
+  right: -40%;
+  z-index: -1;
+}
+
+/* ! Get started sectino */
+
+.gamer {
+  background: url("../Assets/Photos/Rectangle\ 606.png") no-repeat center
+    rgba(18, 18, 18, 0.8);
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  padding: 5rem 0;
+  margin: 7rem 0 0;
+
+  align-items: center;
+}
+
+.gamer > .tittle-left {
+  width: 60%;
+  text-align: center;
+  align-items: center;
+}
+
+.gamer > .tittle-left > p {
+  padding: 1rem 4rem;
+}
+
+/* ? respoinsive */
+
+@media (max-width: 800px) {
+  .gamer {
+    padding: 1rem 2rem;
+  }
+
+  .gamer > .tittle-left {
+    width: 80%;
+  }
+}
+
+/* ? mobile */
+
+@media (max-width: 600px) {
+  .game-of-year {
+    padding: 3rem 2rem;
+  }
+
+  .game-of-year > h1 {
+    font: normal 600 24px/177% "Slovic", Serif;
+    letter-spacing: 0.02em;
+    width: 100%;
+  }
+
+  .game-of-year > .game-display > .image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .game-of-year > .game-display > .tittle-left {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .game-of-year > .game-display > .tittle-left > p,
+  .game-of-year > .game-display > .tittle-left > .buttons {
+    width: 100%;
+    padding: 0;
+  }
+
+  .gamer > .tittle-left {
+    padding: 2rem 0;
+    width: 100%;
+  }
+
+  .gamer > .tittle-left > h1 {
+    font: normal 600 24px/177% "Slovic", Serif;
+    letter-spacing: 0.02em;
+    width: 100%;
+  }
+
+  .gamer > .tittle-left > p {
+    padding: 0;
+  }
+
+  .stroke-text {
+    display: none;
+  }
+}
+
+/* ! footer section */
+
+footer {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 2rem;
+
+  justify-content: space-between;
+  gap: 2rem;
+  flex-flow: wrap;
+}
+
+.promo {
+  gap: 1rem;
+  width: 20%;
+}
+
+footer img[alt="logo"] {
+  height: 2rem;
+  align-self: flex-start;
+}
+
+footer ul {
+  gap: 1rem;
+  width: fit-content;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+@media (max-width: 600px) {
+  footer .promo ~ div {
+    display: none;
+  }
+
+  .promo {
+    width: 100%;
+  }
 }
