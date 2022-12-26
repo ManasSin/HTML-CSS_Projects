@@ -176,14 +176,16 @@
 
     <!-- ! advertizement section -->
 
-    <main class="advertize">
+    <main class="advertize flex-col">
       <div class="flex-row display">
-        <div class="blue-banner">
+        <div class="blue-banner-left">
           <div class="box"></div>
-          <img
-            src="./Assets/Photos/featuresImage1.png"
-            alt="feature image of a house"
-          />
+          <div class="featured-image">
+            <img
+              src="./Assets/Photos/featuresImage1.png"
+              alt="feature image of a house"
+            />
+          </div>
         </div>
         <div class="title-left flex-col">
           <h1 class="sub-heading text-black">Modern, Trendy, Affordable!</h1>
@@ -194,6 +196,83 @@
           <button class="btn-big">Early Bird Book</button>
         </div>
       </div>
+
+      <!-- ? 2nd row -->
+      <div class="flex-row display">
+        <div class="blue-banner-right">
+          <div class="box"></div>
+          <div class="featured-image">
+            <img
+              src="./Assets/Photos/featuresImage2.png"
+              alt="feature image of a house"
+            />
+          </div>
+        </div>
+        <div class="title-left flex-col">
+          <h1 class="sub-heading text-black">Unique House For Long Term!</h1>
+          <p class="text-body text-black-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+            excepturi aliquid sed laudantium quod id ipsam quia beatae
+          </p>
+          <button class="btn-big">Early Bird Book</button>
+        </div>
+      </div>
+
+      <!-- ! newsletter section -->
+
+      <div class="newsletter title-left flex-col">
+        <h1 class="sub-heading text-white">
+          Subscribe to our Newsletter <br />
+          For Weekly Article Update.
+        </h1>
+        <p class="text-white text-body">
+          we have real estate-related blog so we can share our thoght and
+          rutinity in our blog that update weekly. We will not span yo, we
+          promise.
+        </p>
+        <div class="buttons flex-row">
+          <input type="text" placeholder="Enter your e-mail address" />
+          <button class="btn-big">Subscribe</button>
+        </div>
+      </div>
     </main>
+
+    <!-- ! footer -->
+
+    <footer class="flex-row">
+      <div class="promo flex-col">
+        <img src="./Assets/Icons/Logo.svg" alt="logo" />
+        <div class="flex-row">
+          <img src="./Assets/Icons/facebook.png" alt="facebook" />
+          <img src="./Assets/Icons/twitter.png" alt="twitter" />
+          <img src="./Assets/Icons/instagram.png" alt="instagram" />
+        </div>
+        <p class="text-black text-body">
+          2022 Award winning Real estate and lorem iasdhf asdhfaue ssd sdfas
+          asdfasr dfasfasef.
+        </p>
+      </div>
+      <div class="flex-col text-black-light">
+        <p class="semi-bold-small text-black">Location</p>
+        <a href="#" class="text-body">America</a
+        ><a href="#" class="text-body">Aisa</a
+        ><a href="#" class="text-body">Europe</a
+        ><a href="#" class="text-body">Africa</a>
+      </div>
+      <div class="flex-col text-black-light">
+        <p class="semi-bold-small text-black">Contact</p>
+        <a href="#" class="text-body">About Me</a
+        ><a href="#" class="text-body">Teams</a
+        ><a href="#" class="text-body">Profile</a
+        ><a href="#" class="text-body">FAQ</a>
+      </div>
+      <div class="flex-col text-black-light">
+        <p class="semi-bold-small text-black">Legais</p>
+        <a href="#" class="text-body">Privacy</a
+        ><a href="#" class="text-body">Disclaimer</a
+        ><a href="#" class="text-body">Terms</a
+        ><a href="#" class="text-body">Company</a>
+      </div>
+    </footer>
   </body>
 </html>
