@@ -14,5 +14,7 @@ In this webpage, I have tried to display
 - below you will find a nice looking small feature display cards, with a unique border.
 - and many more modern design element. through out this project.
 
+---
+
 > Screen Short of the webpage
 > ![herosection-SS](./ScreenShots%20/SCR-20221228-pgh.jpeg)
