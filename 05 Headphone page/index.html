@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Headphone Home</title>
   </head>
@@ -65,5 +71,68 @@
         </div>
       </div>
     </main>
+
+    <!-- ! banner section -->
+
+    <section aria-label="banner" class="banner flex-row">
+      <div aria-label="Brand-logo" tabindex="5">
+        <img src="./assets/Photos/appleLogo.png" alt="Apple logo" />
+      </div>
+      <div aria-label="Brand-logo" tabindex="6">
+        <img src="./assets/Photos/spotifyLogo.png" alt="Spotify logo" />
+      </div>
+      <div aria-label="Brand-logo" tabindex="7">
+        <img src="./assets/Photos/amazonLogo.png" alt="Amazon logo" />
+      </div>
+      <div aria-label="Brand-logo" tabindex="8">
+        <img src="./assets/Photos/youtubeLogo.png" alt="Youtube logo" />
+      </div>
+    </section>
+
+    <!-- ! specs section -->
+
+    <section aria-lable="discreption" class="flex-col specs-discreption">
+      <div class="specs-text">
+        <h1 class="background-small-text">Specs</h1>
+      </div>
+
+      <div class="specs flex-row">
+        <div class="specs-info flex-col text-white">
+          <div tabindex="9" class="flex-col">
+            <img src="./assets/Icons/bluetooth.png" alt="bluetooth image" />
+            <p class="sub-heading-small">Connection</p>
+            <p class="text-body text-white-light">Bluetooth v5.2</p>
+          </div>
+
+          <div tabindex="10" class="flex-col">
+            <img src="./assets/Icons/battery.png" alt="battery image" />
+            <p class="sub-heading-small">Battery</p>
+            <p class="text-body text-white-light">Duration 40h</p>
+          </div>
+
+          <div tabindex="11" class="flex-col">
+            <img src="./assets/Icons/charger.png" alt="battery image" />
+            <p class="sub-heading-small">Load</p>
+            <p class="text-body text-white-light">Fast charge 4.2-AAC</p>
+          </div>
+
+          <div tabindex="12" class="flex-col">
+            <img src="./assets/Icons/mic.png" alt="battery image" />
+            <p class="sub-heading-small">Microphone</p>
+            <p class="text-body text-white-light">
+              Supports Apple Siri and Google
+            </p>
+          </div>
+        </div>
+
+        <div class="specs-image flex-col">
+          <div class="background-circle"></div>
+          <img
+            src="./assets/Photos/specsImage.png"
+            alt="beats headphone side profile"
+          />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
