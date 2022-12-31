@@ -73,9 +73,9 @@ h6 {
 :root {
   /* ? text variable */
 
-  --faded-mega-text: normal 600 65px/153.4% "Poppins", Arial;
-  --faded-small-text: normal 400 40px/153.4% "Poppins", Arial;
-  --heading: normal 600 34px/153.9% "Poppins", Arial;
+  --faded-mega-text: normal 600 100px/153.4% "Poppins", Arial;
+  --faded-small-text: normal 400 60px/153.4% "Poppins", Arial;
+  --heading: normal 600 50px/153.9% "Poppins", Arial;
   /* letter-spacing: 0.01em; */
   --sub-heading: normal 500 20px/153.9% "Poppins", Arial;
   /* letter-spacing: -0.03em; */
@@ -92,10 +92,10 @@ h6 {
   --white-light: rgba(255, 255, 255, 0.6);
 
   /* text-background */
-  --gradient-background: inear-gradient(
+  --gradient-background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.29) 0%,
-    rgba(33, 31, 31, 0.53) 86.5%
+    rgba(255, 255, 255, 0.29),
+    rgba(33, 31, 31, 0.8) 86.5%
   );
 
   /* ? spacing variable */
@@ -111,10 +111,11 @@ h6 {
 /* ? background text */
 
 .background-big-text {
-  font: var(--faded-mega-text);
   background: var(--gradient-background);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font: var(--faded-mega-text);
 }
 
 .background-small-text {
@@ -122,6 +123,12 @@ h6 {
   background: var(--gradient-background);
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.background-circle {
+  background: rgba(202, 245, 255, 0.08);
+  filter: blur(72px);
 }
 
 /* ? btn classes */
@@ -140,7 +147,7 @@ h6 {
   list-style-type: none;
 
   background-color: var(--black-light);
-  padding: 0.5em 0.75em;
+  padding: 0.5em 1.5em;
   border-radius: 4px;
 }
 
@@ -200,7 +207,7 @@ header {
 
 nav {
   max-width: var(--max-width);
-  padding: var(--gap-xsmall) var(--gap-small);
+  padding: var(--gap-small) var(--gap-small);
   justify-content: space-between;
   align-items: center;
   margin: auto;
@@ -211,7 +218,7 @@ nav > ul {
   gap: var(--gap-small);
   flex: 1 1 auto;
   justify-content: flex-end;
-  padding: 0 var(--gap-xsmall);
+  padding: 0 var(--gap-big);
   list-style-type: none;
 }
 
@@ -220,13 +227,22 @@ nav > ul {
 .hero {
   width: var(--max-width);
   margin: auto;
-  justify-content: space-between;
+  justify-content: flex-end;
+  padding: calc(var(--gap-big) + var(--gap-small)) var(--gap-small);
+  position: relative;
+}
+
+.right {
+  position: absolute;
+  left: var(--gap-small);
+  top: -16rem;
 }
 
 .left {
-  width: 50%;
+  width: 60%;
   align-items: flex-start;
   gap: var(--gap-small);
+  padding-inline-start: 1rem;
 }
 
 .left > div {
@@ -235,5 +251,96 @@ nav > ul {
 }
 
 .left > p {
-  padding-inline-end: 9em;
+  padding-inline-end: 10em;
+}
+
+.background-big-text {
+  position: absolute;
+  top: -0.35em;
+  right: 2em;
+}
+
+/* ! banner section */
+
+.banner {
+  max-width: var(--max-width);
+  margin: auto;
+  padding-block: calc(var(--gap-big) + var(--gap-small));
+
+  gap: var(--gap-small);
+  justify-content: space-around;
+}
+
+/* ! specs section */
+
+.specs-discreption {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: var(--gap-small);
+
+  gap: var(--gap-small);
+  align-items: center;
+}
+
+.specs {
+  width: 100%;
+  justify-content: center;
+  gap: var(--gap-big);
+  position: relative;
+}
+
+.specs-info {
+  gap: var(--gap-small);
+}
+
+.specs-info img {
+  height: 1.5rem;
+  width: 1rem;
+}
+
+.specs-info div[tabindex="9"],
+.specs-info div[tabindex="12"] {
+  padding-inline-start: var(--gap-small);
+  width: 70%;
+}
+
+.specs-image {
+  justify-content: center;
+}
+
+.specs-image > .background-circle {
+  display: none;
+  width: 347px;
+  height: 347px;
+  border-radius: 100%;
+
+  position: absolute;
+  left: 50%;
+  right: 50%;
+}
+
+.specs-image:is(:hover) .background-circle {
+  display: block;
+  z-index: -1;
+  animation: circle 300ms;
+  /* transition: ease-in-out 500ms; */
+}
+
+@keyframes circle {
+  0% {
+    width: 0px;
+    height: 0px;
+
+    margin: auto;
+  }
+
+  /* 50% {
+    width: 200px;
+    height: 200px;
+  } */
+
+  100% {
+    width: 347px;
+    height: 347px;
+  }
 }
