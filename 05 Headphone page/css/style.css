@@ -344,3 +344,98 @@ nav > ul {
     height: 347px;
   }
 }
+
+/* ! case */
+
+.case {
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-big);
+
+  padding-block: var(--gap-big);
+}
+
+.case-info {
+  gap: var(--gap-big);
+  justify-content: center;
+  align-items: center;
+}
+
+.case-text {
+  width: 25.5%;
+  gap: var(--gap-small);
+  align-items: flex-start;
+}
+
+.case-text > .btn-small {
+  align-items: center;
+  gap: var(--gap-xsmall);
+}
+
+.case-text > .btn-small > img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* ! buy now section */
+
+.buy-now {
+  max-width: var(--max-width);
+  justify-content: space-evenly;
+  background-color: var(--black-light);
+  align-items: center;
+  width: 100%;
+  /* padding-block: calc(var(--gap-small) + var(--gap-xsmall)); */
+  padding-block: var(--gap-small);
+  border-radius: 10px;
+
+  margin-block: var(--gap-small);
+}
+
+.buy-now-text {
+  align-items: flex-start;
+  width: 30%;
+  gap: var(--gap-xsmall);
+}
+
+.buy-now-text > h1 {
+  font-size: 24px;
+}
+
+.buy-now-text > .btn-small {
+  background-color: var(--black-body);
+  gap: var(--gap-xsmall);
+  align-items: center;
+}
+
+.buy-now-text > .btn-small > img {
+  display: inline-block;
+}
+
+/* ! style section */
+
+.style {
+  align-items: center;
+  gap: var(--gap-big);
+}
+
+.cards {
+  flex-flow: wrap;
+  width: 80%;
+  gap: var(--gap-small);
+}
+
+.card-items {
+  width: fit-content;
+  background-color: var(--black-light);
+  padding-inline: 1em;
+  position: relative;
+}
+
+.card-items > img {
+  position: absolute;
+  top: -1rem;
+  /* width: 6rem; */
+  height: 6rem;
+  aspect-ratio: 0.8;
+}
