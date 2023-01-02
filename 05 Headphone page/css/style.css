@@ -390,6 +390,8 @@ nav > ul {
   border-radius: 10px;
 
   margin-block: var(--gap-small);
+
+  /* filter: drop-shadow(5px 5px 10px #000); */
 }
 
 .buy-now-text {
@@ -414,28 +416,109 @@ nav > ul {
 
 /* ! style section */
 
+.big-text {
+  text-align: center;
+}
+
+.big-text h1 ~ h1 {
+  margin-top: -2.4rem;
+}
+
 .style {
+  margin-block: var(--gap-big);
   align-items: center;
-  gap: var(--gap-big);
+  gap: calc(var(--gap-big) + var(--gap-small));
 }
 
 .cards {
   flex-flow: wrap;
   width: 80%;
-  gap: var(--gap-small);
+  gap: calc(var(--gap-big) + var(--gap-small)) var(--gap-big);
 }
 
 .card-items {
   width: fit-content;
   background-color: var(--black-light);
   padding-inline: 1em;
-  position: relative;
+  width: 190px;
+  align-items: center;
+  border-radius: 6px;
+
+  filter: drop-shadow(5px 5px 10px #000);
 }
 
 .card-items > img {
-  position: absolute;
-  top: -1rem;
-  /* width: 6rem; */
-  height: 6rem;
-  aspect-ratio: 0.8;
+  position: relative;
+  top: -2rem;
+  left: auto;
+  right: auto;
+  width: 7.5rem;
+  height: 9rem;
+
+  transition: 250ms;
+}
+
+.card-items > img:hover {
+  scale: 115%;
+  filter: drop-shadow(5px 5px 20px var(--black-body));
+  transition: ease-in-out 500ms;
+}
+
+.card-items > .flex-row {
+  gap: var(--gap-xsmall);
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0.7rem;
+}
+
+.card-items .btn-small {
+  padding: 0.5rem;
+  background-color: var(--black-body);
+}
+
+/* ! footer section */
+
+footer {
+  max-width: var(--max-width);
+  padding-block: var(--gap-big);
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li:first-child {
+  font: var(--sub-heading);
+  color: var(--white-bright);
+  padding-block-end: var(--gap-xsmall);
+}
+
+.social-links {
+  gap: var(--gap-small);
+}
+
+.social-links input {
+  background-color: inherit;
+  list-style-type: none;
+  border: none;
+}
+
+.social-links input:focus {
+  background-color: inherit;
+  /* list-style-type: none; */
+  border: none;
+  outline: none;
+  color: var(--white-bright);
+}
+
+.social-links > .btn-small > .btn-small {
+  background-color: var(--black-body);
+  gap: var(--gap-xsmall);
+}
+
+.social-links > .flex-row ~ .flex-row {
+  gap: var(--gap-xsmall);
 }
