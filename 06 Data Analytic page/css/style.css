@@ -1,3 +1,5 @@
+/* * i'll try to make this project using grid layout. but for that i'll  have to first learn the grid way of doing things and it's application */
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -68,6 +70,8 @@ h6 {
   isolation: isolate;
 }
 
+/* ! variables for this project */
+
 :root {
   /* ? color varibales */
 
@@ -105,4 +109,54 @@ h6 {
 
   --footer-bold: normal 600 17px / auto "Montserrat", Arial;
   --footer-small: normal 500 12px / auto "Montserrat", Arial;
+
+  /* ? margin , padding, gap */
+
+  --space-big: 7rem;
+  --space-medium: 3.5rem;
+  --space-small: 2rem;
+  --space-x-small: 1rem;
+}
+
+/* ! generic classes */
+
+/* ? font */
+
+.heading {
+  font: var(--heading-big);
+  letter-spacing: -0.045em;
+}
+
+.heading-small {
+  font: var(--heading-small);
+  letter-spacing: -0.045em;
+}
+
+.sub-heading {
+  font: var(--sub-heading-small);
+  letter-spacing: -0.045em;
+}
+
+.regular-large {
+  font: var(--body-large);
+  letter-spacing: -0.045em;
+}
+
+.regular {
+  font: var(--body-text);
+  letter-spacing: -0.035em;
+}
+
+/* ? color */
+
+.black-light {
+  color: var(--black-text-light);
+}
+
+.black-dark {
+  color: var(--black-text-dark);
+}
+
+.purple-dark {
+  color: var(--purple-text-dark);
 }
