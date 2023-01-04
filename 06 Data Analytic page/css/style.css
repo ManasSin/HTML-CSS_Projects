@@ -89,26 +89,25 @@ h6 {
   --gradient-background-top: linear-gradient(
     180deg,
     rgba(253, 254, 255, 1) 0%,
-    rgba(253, 254, 255, 1) 9%,
-    rgba(232, 244, 255, 1) 100%
+    rgb(204, 230, 255) 100%
   );
 
   --gradient--background-middle: linear-gradient(
     180deg,
-    rgba(252, 248, 255, 1) 36%,
-    rgba(245, 248, 255, 1) 62%
+    rgb(244, 234, 252) 36%,
+    rgb(224, 233, 253) 62%
   );
 
   /* ? font properties */
 
   --heading-big: normal 700 48px/100.9% "Montserrat", Arial;
-  --heading-small: normal 700 32px / auto "Montserrat", Arial;
-  --sub-heading-small: normal 700 16px / auto "Montserrat", Arial;
+  --heading-small: normal 700 32px "Montserrat", Arial;
+  --sub-heading-small: normal 700 16px "Montserrat", Arial;
   --body-large: normal 500 25px/100.9% "Montserrat", Arial;
   --body-text: normal 500 16px/146.9% "Montserrat", Arial;
 
-  --footer-bold: normal 600 17px / auto "Montserrat", Arial;
-  --footer-small: normal 500 12px / auto "Montserrat", Arial;
+  --footer-bold: normal 600 17px "Montserrat", Arial;
+  --footer-small: normal 500 12px "Montserrat", Arial;
 
   /* ? margin , padding, gap */
 
@@ -116,6 +115,10 @@ h6 {
   --space-medium: 3.5rem;
   --space-small: 2rem;
   --space-x-small: 1rem;
+
+  /* ? widht */
+
+  --max-width: 1090px;
 }
 
 /* ! generic classes */
@@ -127,12 +130,12 @@ h6 {
   letter-spacing: -0.045em;
 }
 
-.heading-small {
+.sub-heading {
   font: var(--heading-small);
-  letter-spacing: -0.045em;
+  /* letter-spacing: -0.045em; */
 }
 
-.sub-heading {
+.sub-heading-small {
   font: var(--sub-heading-small);
   letter-spacing: -0.045em;
 }
@@ -149,6 +152,10 @@ h6 {
 
 /* ? color */
 
+.white-text {
+  color: var(--body-white);
+}
+
 .black-light {
   color: var(--black-text-light);
 }
@@ -159,4 +166,152 @@ h6 {
 
 .purple-dark {
   color: var(--purple-text-dark);
+}
+
+/* ? flex classes */
+
+.flex-col {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row;
+}
+
+/* ? big classes */
+
+.btn-big {
+  padding: 0.5em 2em;
+  border-radius: 30px;
+}
+
+.btn-small {
+  padding: 0.5em 1em;
+  border-radius: 30px;
+}
+
+.btn-primary {
+  background-color: var(--pruple-primary-dark);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid var(--pruple-primary-dark);
+}
+
+.btn-white {
+  background-color: var(--body-white);
+}
+
+.btn-purple {
+  background-color: var(--purple--light-background);
+}
+
+/* ? max width */
+
+.max-width {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+/* ! setting pre styling to none */
+
+button {
+  border: none;
+  list-style: none;
+  font: inherit;
+  padding: none;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+
+a {
+  list-style-type: none;
+  /* text-decoration: none; */
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+  font: inherit;
+}
+
+/* ! main css */
+
+/* * Intro section */
+
+section[aria-label="Intro-section"] {
+  background: var(--gradient-background-top);
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+
+  gap: var(--space-big);
+  padding-block: var(--space-x-small);
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-small);
+}
+
+nav > ul {
+  gap: var(--space-small);
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+/* ? hero section */
+
+section[aria-lable="Hero-section"] {
+  padding: var(--space-big) 0;
+  height: max-content;
+}
+
+.hero-left {
+  width: 50%;
+  padding-inline-end: var(--space-small);
+
+  gap: var(--space-small);
+  align-items: flex-start;
+}
+
+.hero-left > h1 {
+  /* padding-inline-end: var(--space-medium); */
+  width: 85%;
+}
+
+.buttons {
+  gap: var(--space-x-small);
+}
+
+/* ! main section */
+
+article[aria-label="why-us"] {
+  margin-block: var(--space-big);
+  text-align: center;
+
+  align-items: center;
+  gap: var(--space-small);
+}
+
+article[aria-label="why-us"] > div[class="flex-col"] > p {
+  width: 70%;
+}
+
+article[aria-label="why-us"] > div,
+article[aria-label="why-us"] > div:last-child div {
+  text-align: center;
+  align-items: center;
+  gap: var(--space-x-small);
+  /* text-transform: ; */
+}
+
+article[aria-label="why-us"] > div:last-child img {
+  width: 3rem;
+  aspect-ratio: 1;
 }
