@@ -79,17 +79,18 @@
     <main aria-label="Main-section" class="">
       <!-- ? know about Us section -->
 
+      <!-- * why us -->
       <article aria-label="why-us" tabindex="5" class="flex-col max-width">
-        <button class="btn-purple btn-small purple-dark">
+        <button tabindex="5.1" class="btn-purple btn-small purple-dark">
           <img src="./images/Icon awesome-eye.png" alt="_blank" />
           <p class="regular">Why Qubly</p>
         </button>
 
-        <div class="flex-col">
-          <h1 class="black-dark sub-heading">
+        <div tabindex="5.2" class="flex-col">
+          <h1 tabindex="5.2.1" class="black-dark sub-heading">
             Get actionable insights from Big Data in 3 steps
           </h1>
-          <p class="regular black-light">
+          <p tabindex="5.2.2" class="regular black-light">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, eum
             molestias! Provident nam maxime ullam quod hic excepturi modi
             adipisci eum magnam distinctio facere ad, nulla iure possimus
@@ -97,8 +98,8 @@
           </p>
         </div>
 
-        <div class="flex-row">
-          <div class="flex-col">
+        <div tabindex="5.3" class="flex-row">
+          <div tabindex="5.3.1" class="flex-col">
             <img src="./images/chart-bar-33.svg" alt="#" />
             <p class="sub-heading-small black-dark">
               Valuable business insights
@@ -108,7 +109,7 @@
               to gather valubale business insights.
             </p>
           </div>
-          <div class="flex-col">
+          <div tabindex="5.3.2" class="flex-col">
             <img src="./images/newsletter-dev.svg" alt="#" />
             <p class="sub-heading-small black-dark">Powerful Algorithms</p>
             <p class="regular black-light">
@@ -116,7 +117,7 @@
               obtain simplified and enriched data.
             </p>
           </div>
-          <div class="flex-col">
+          <div tabindex="5.3.3" class="flex-col">
             <img src="./images/newsletter-dev.svg" alt="#" />
             <p class="sub-heading-small black-dark">Data in real-times</p>
             <p class="regular black-light">
@@ -126,6 +127,188 @@
           </div>
         </div>
       </article>
+
+      <!-- *Product section -->
+      <article aria-label="platforms" class="flex-row max-width">
+        <div class="image">
+          <img
+            src="./images/Group 21.svg"
+            alt="image shows varaity of products"
+          />
+        </div>
+        <div class="flex-col teams">
+          <button class="btn-small btn-purple">
+            <img src="./images/Group 11.svg" alt="" />
+            <p class="regular">For Product Teams</p>
+          </button>
+          <h1 class="sub-heading black-dark">Launch with the best stack</h1>
+          <p class="regular black-light">
+            A centralized platfrom that integrates zilloins of data sources
+            using Big Data ELT (Extract, Load & Transform) that leaves no data
+            behind.
+          </p>
+        </div>
+      </article>
+
+      <!-- * engineering teams section -->
+
+      <article aria-label="pipelines" class="flex-row max-width">
+        <div class="flex-col teams">
+          <button class="btn-purple btn-small">
+            <img src="./images/Group 28.svg" alt="" />
+            <p class="regular">For Engineering Teams</p>
+          </button>
+          <h1 class="sub-heading black-dark">
+            Data-driven pipelines in minutes
+          </h1>
+          <p class="regular black-light">
+            Maintenance-free data pipelines with quick set-up and
+            straight-forward deployments that are powered by a modern & scalable
+            platfrom.
+          </p>
+        </div>
+
+        <div class="image">
+          <img src="./images/image 6.png" alt="pipelines image" />
+        </div>
+      </article>
+
+      <section aria-label="review-section">
+        <div class="flex-col max-width">
+          <p class="regular-large black-dark">
+            "What I love about SullivanAnalvtics is the easv wav we can
+            collaborate even if there is a lot or people involved in the
+            process"
+          </p>
+          <img
+            src="./images/Profile.png"
+            alt="profile image of CTO of sullivanAnalytics"
+          />
+          <div class="flex col">
+            <p class="sub-heading-small black-dark">Rowan Sullivan</p>
+            <p class="sub-heading-small black-dark">CTO @ SullivanAnalytics</p>
+          </div>
+          <div class="br"></div>
+          <div class="flex-row">
+            <img src="./images/Logo.png" alt="logo" />
+            <img src="./images/Logo.png" alt="logo" />
+            <img src="./images/Logo.png" alt="logo" />
+            <img src="./images/Logo.png" alt="logo" />
+            <img src="./images/Logo.png" alt="logo" />
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="User-Sign-Up">
+        <div class="flex-row max-width">
+          <div class="flex-col">
+            <p class="sub-heading black-dark">
+              See why the world's best companies used Qubly to become truly
+              data-driven.
+            </p>
+            <div class="flex-row">
+              <div class="br"></div>
+              <p class="black-light regular">Trusted by</p>
+              <div class="br"></div>
+            </div>
+            <div class="flex-col">
+              <div class="flex-row">
+                <img src="./images/Logo.png" alt="logo" />
+                <img src="./images/Logo.png" alt="logo" />
+              </div>
+              <div class="flex-row">
+                <img src="./images/Logo.png" alt="logo" />
+                <img src="./images/Logo.png" alt="logo" />
+              </div>
+            </div>
+          </div>
+
+          <!-- right side / form -->
+
+          <div class="form">
+            <form class="flex-col" action="#">
+              <p class="sub-heading black-text">Sign Up</p>
+              <button class="btn-form">Start your free trail</button>
+              <input type="text" placeholder="Your primary email" />
+              <input type="text" placeholder="Password" />
+              <input type="text" placeholder="Re-type Password" />
+              <p class="regular black-dark">OR</p>
+              <img
+                src="./images/btn_google_signin_dark_normal_web@2x.svg"
+                alt="google button"
+              />
+              <div class="br"></div>
+              <p class="regular black-light">
+                Already have an account? <span class="purple-dark">login</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- ! footer -->
+
+    <footer aria-label="footer-section">
+      <section class="flex-row max-width">
+        <div class="flex-col">
+          <img src="./images/Logo.png" alt="logo" />
+          <p class="footer-regular black-dark">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+            sit error magni. Deserunt dolorum rem aspernatur omnis facere cumque
+            voluptate? Excepturi commodi minus
+          </p>
+          <div class="flex-row">
+            <img src="./images/facebook-icon.svg" alt="facebook icon" /><img
+              src="./images/twitter-3.svg"
+              alt="twitter icon"
+            /><img src="./images/instagram-2016.svg" alt="instagram-2016" />
+          </div>
+        </div>
+
+        <ul class="flex-col black-dark">
+          <li class="footer-sub-heading">Product</li>
+          <li class="footer-regular">Connection</li>
+          <li class="footer-regular">Protocols</li>
+          <li class="footer-regular">Personas</li>
+          <li class="footer-regular">Integrations</li>
+          <li class="footer-regular">Integrations</li>
+          <li class="footer-regular">Integrations</li>
+          <li class="footer-regular">Integrations</li>
+          <li class="footer-regular">Integrations</li>
+        </ul>
+        <ul class="flex-col black-dark">
+          <li class="footer-sub-heading">For Developers</li>
+          <li class="footer-regular">Docs</li>
+          <li class="footer-regular">API</li>
+          <li class="footer-regular">Open Source</li>
+          <li class="footer-regular">Engineering Team</li>
+        </ul>
+        <ul class="flex-col black-dark">
+          <li class="footer-sub-heading">Company</li>
+          <li class="footer-regular">Careers</li>
+          <li class="footer-regular">Blog</li>
+          <li class="footer-regular">Press</li>
+        </ul>
+        <ul class="flex-col black-dark">
+          <li class="footer-sub-heading">Support</li>
+          <li class="footer-regular">Help Center</li>
+          <li class="footer-regular">Contact Us</li>
+          <li class="footer-regular">Security</li>
+          <li class="footer-regular">Bullentins</li>
+          <li class="footer-regular">Documentation</li>
+          <li class="footer-regular">Bullentins</li>
+          <li class="footer-regular">Bullentins</li>
+        </ul>
+
+        <div class="flex-col">
+          <p class="footer-sub-heading black-dark">Newsletter</p>
+          <button class="btn-white btn-small">
+            <p class="footer-regular black-light">Email</p>
+            <img src="./images/Icon ionic-ios-send.png" alt="" />
+          </button>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

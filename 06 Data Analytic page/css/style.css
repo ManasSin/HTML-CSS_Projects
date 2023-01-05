@@ -132,7 +132,7 @@ h6 {
 
 .sub-heading {
   font: var(--heading-small);
-  /* letter-spacing: -0.045em; */
+  letter-spacing: -0.045em;
 }
 
 .sub-heading-small {
@@ -148,6 +148,14 @@ h6 {
 .regular {
   font: var(--body-text);
   letter-spacing: -0.035em;
+}
+
+.footer-sub-heading {
+  font: var(--footer-bold);
+}
+
+.footer-regular {
+  font: var(--footer-small);
 }
 
 /* ? color */
@@ -207,6 +215,7 @@ h6 {
 
 .btn-purple {
   background-color: var(--purple--light-background);
+  color: var(--pruple-primary-dark);
 }
 
 /* ? max width */
@@ -314,4 +323,187 @@ article[aria-label="why-us"] > div:last-child div {
 article[aria-label="why-us"] > div:last-child img {
   width: 3rem;
   aspect-ratio: 1;
+}
+
+/* ? platforms */
+
+article[aria-label="platforms"] {
+  align-items: center;
+  gap: var(--space-medium);
+}
+
+.image {
+  width: 70%;
+}
+
+.teams {
+  align-items: flex-start;
+  gap: var(--space-small);
+}
+
+.teams > p {
+  width: 80%;
+}
+
+/* ? pipelines */
+
+article[aria-label="pipelines"] {
+  margin-block: var(--space-big);
+  align-items: center;
+  gap: var(--space-medium);
+}
+
+/* ? review-section */
+
+section[aria-label="review-section"] {
+  padding: var(--space-medium);
+  height: max-content;
+  background: var(--gradient--background-middle);
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+}
+
+section[aria-label="review-section"] > div {
+  margin-block: var(--space-big);
+  gap: var(--space-small);
+  align-items: center;
+  text-align: center;
+}
+
+section[aria-label="review-section"] > div > p {
+  padding-inline: var(--space-small);
+}
+
+section[aria-label="review-section"] > div > img {
+  width: 4rem;
+  aspect-ratio: 1;
+}
+
+section[aria-label="review-section"] .br {
+  height: 2px;
+  width: 100%;
+  background-color: #4d4d4d20;
+}
+
+section[aria-label="review-section"] > div div:last-child {
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* ? user-sign-up */
+
+section[aria-label="User-Sign-Up"] {
+  margin-block: var(--space-big);
+}
+
+section[aria-label="User-Sign-Up"] > div {
+  gap: var(--space-small);
+}
+
+section[aria-label="User-Sign-Up"] > div > div:first-child {
+  max-width: 50%;
+  gap: var(--space-small);
+}
+
+section[aria-label="User-Sign-Up"] > div > div:first-child div:has(.br) {
+  align-items: center;
+  gap: var(--space-x-small);
+}
+
+section[aria-label="User-Sign-Up"] .br {
+  height: 2px;
+  background-color: #4d4d4d20;
+  width: 30%;
+}
+
+section[aria-label="User-Sign-Up"]
+  > div
+  > div:first-child
+  div:has(img[alt="logo"]) {
+  gap: var(--space-medium) var(--space-big);
+}
+
+/* * form */
+
+.form {
+  min-width: 50%;
+  background: rgb(244, 234, 252) 36%;
+  padding: var(--space-small);
+  height: fit-content;
+}
+
+.form > form {
+  align-items: center;
+  background: #fff;
+  margin-top: -4rem;
+  padding: var(--space-small);
+  gap: var(--space-x-small);
+  filter: drop-shadow(5px 5px 10px #00000020);
+}
+
+.btn-form {
+  border-radius: 6px;
+  background-color: var(--pruple-primary-dark);
+  color: var(--body-white);
+  font: var(--body-text);
+  width: 90%;
+  padding: 12px 0;
+  display: grid;
+  place-content: center;
+  filter: drop-shadow(5px 5px 10px #00000020);
+}
+
+.form > form > input {
+  width: 90%;
+  padding: 8px var(--space-x-small);
+  font: var(--body-text);
+  border-color: #4d4d4d20;
+  border-radius: 6px;
+}
+
+.form form .br {
+  width: 90%;
+}
+
+/* ? footer */
+
+footer {
+  background-color: rgba(224, 233, 253, 0.5);
+  padding: var(--space-big) 0;
+}
+
+footer section {
+  justify-content: space-between;
+  gap: var(--space-x-small);
+}
+
+footer section div {
+  gap: var(--space-x-small);
+}
+
+footer section ul {
+  gap: 9px;
+}
+
+footer section ul > li:first-child {
+  margin-bottom: var(--space-x-small);
+}
+
+footer section > div:first-child > img {
+  width: 6rem;
+}
+
+footer section > div:first-child {
+  width: 20%;
+}
+
+footer section > div:has(.btn-small) {
+  width: 16%;
+  align-items: flex-start;
+}
+
+footer section > div > .btn-small {
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 6px;
+  filter: drop-shadow(2px 2px 5px #00000020);
 }
